@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ирина Кречетова — Живопись & Лэмпворк</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative grain overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#" class="logo" data-navigate="home">
+                <span class="logo-mark">IK</span>
+                <span class="logo-text">
+                    <span data-i18n="artistName">Ирина Кречетова</span>
+                    <span class="logo-subtitle" data-i18n="artistTitle">художник-импрессионист</span>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#" class="nav-link active" data-navigate="home" data-i18n="navHome">Главная</a>
+                <a href="#" class="nav-link" data-navigate="paintings" data-i18n="navPaintings">Картины</a>
+                <a href="#" class="nav-link" data-navigate="lampwork" data-i18n="navLampwork">Лэмпворк</a>
+                <a href="#" class="nav-link" data-navigate="about" data-i18n="navAbout">О художнике</a>
+                <a href="#" class="nav-link" data-navigate="contacts" data-i18n="navContacts">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="cn">中文</button>
+                </div>
+                <button class="icon-btn user-btn" id="userBtn" aria-label="Account">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/></svg>
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 2H2"/></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <nav class="mobile-nav-inner">
+            <a href="#" class="mobile-nav-link" data-navigate="home" data-i18n="navHome">Главная</a>
+            <a href="#" class="mobile-nav-link" data-navigate="paintings" data-i18n="navPaintings">Картины</a>
+            <a href="#" class="mobile-nav-link" data-navigate="lampwork" data-i18n="navLampwork">Лэмпворк</a>
+            <a href="#" class="mobile-nav-link" data-navigate="about" data-i18n="navAbout">О художнике</a>
+            <a href="#" class="mobile-nav-link" data-navigate="contacts" data-i18n="navContacts">Контакты</a>
+        </nav>
+    </div>
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <main>
+        <section class="page page-home active" id="page-home">
+            <!-- Hero -->
+            <div class="hero">
+                <div class="hero-bg">
+                    <div class="hero-painting painting-placeholder" style="--g1:#7ba898;--g2:#c4a86c;--g3:#8fb5c4;--g4:#d4a574;--g5:#a8c5a0"></div>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-eyebrow" data-i18n="heroEyebrow">Галерея авторских работ</p>
+                    <h1 class="hero-title">
+                        <span data-i18n="heroTitle1">Ирина</span><br>
+                        <span data-i18n="heroTitle2">Кречетова</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">Импрессионизм · Живопись маслом · Лэмпворк</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" data-navigate="paintings" data-i18n="heroCta1">Смотреть картины</button>
+                        <button class="btn btn-outline" data-navigate="lampwork" data-i18n="heroCta2">Коллекция лэмпворк</button>
+                    </div>
+                </div>
+                <div class="hero-scroll-hint">
+                    <span data-i18n="scrollHint">Листайте вниз</span>
+                    <svg width="16" height="24" viewBox="0 0 16 24"><path d="M8 0v20M2 16l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                </div>
+            </div>
+
+            <!-- Featured Paintings -->
+            <div class="section featured-section">
+                <div class="section-header">
+                    <span class="section-label" data-i18n="featuredLabel">Избранное</span>
+                    <h2 class="section-title" data-i18n="featuredTitle">Избранные работы</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="featured-grid" id="featuredGrid">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="section-footer">
+                    <button class="btn btn-outline" data-navigate="paintings" data-i18n="viewAll">Смотреть все работы</button>
+                </div>
+            </div>
+
+            <!-- Lampwork Preview -->
+            <div class="section lampwork-preview-section">
+                <div class="section-header">
+                    <span class="section-label" data-i18n="lampworkLabel">Ручная работа</span>
+                    <h2 class="section-title" data-i18n="lampworkPreviewTitle">Коллекция лэмпворк</h2>
+                    <p class="section-desc" data-i18n="lampworkDesc">Авторские украшения и декор из стекла, созданные в технике лэмпворк</p>
+                    <div class="section-line"></div>
+                </div>
+                <div class="lampwork-showcase" id="lampworkShowcase">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="section-footer">
+                    <button class="btn btn-outline" data-navigate="lampwork" data-i18n="viewLampwork">Вся коллекция</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PAINTINGS CATALOG ==================== -->
+        <section class="page page-catalog" id="page-paintings">
+            <div class="catalog-hero">
+                <h1 class="catalog-title" data-i18n="paintingsPageTitle">Картины</h1>
+                <p class="catalog-subtitle" data-i18n="paintingsPageSubtitle">Масло на холсте · Импрессионизм</p>
+            </div>
+            <div class="catalog-layout">
+                <aside class="catalog-filters">
+                    <h3 class="filter-title" data-i18n="categories">Категории</h3>
+                    <div class="filter-group" id="paintingFilters">
+                        <!-- Filled by JS dynamically -->
+                    </div>
+                </aside>
+                <div class="catalog-grid" id="paintingsGrid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== LAMPWORK CATALOG ==================== -->
+        <section class="page page-catalog" id="page-lampwork">
+            <div class="catalog-hero">
+                <h1 class="catalog-title" data-i18n="lampworkPageTitle">Лэмпворк</h1>
+                <p class="catalog-subtitle" data-i18n="lampworkPageSubtitle">Авторские украшения и декор из стекла</p>
+            </div>
+            <div class="catalog-layout">
+                <aside class="catalog-filters">
+                    <h3 class="filter-title" data-i18n="categories">Категории</h3>
+                    <div class="filter-group" id="lampworkFilters">
+                        <!-- Filled by JS dynamically -->
+                    </div>
+                </aside>
+                <div class="catalog-grid" id="lampworkGrid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section class="page page-about" id="page-about">
+            <div class="about-layout">
+                <div class="about-image">
+                    <div class="painting-placeholder about-portrait" style="--g1:#d4a574;--g2:#c4a86c;--g3:#e8c4c4;--g4:#7EC8C8;--g5:#B8E0D2"></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label" data-i18n="aboutLabel">О художнике</span>
+                    <h1 class="about-title" data-i18n="aboutTitle">Ирина Кречетова</h1>
+                    <div class="about-text">
+                        <p data-i18n="aboutText1">Художник-импрессионист, работающий в технике масляной живописи. Картины Ирины наполнены светом, воздухом и эмоциями — каждая работа передаёт настроение момента.</p>
+                        <p data-i18n="aboutText2">Помимо живописи, Ирина создаёт уникальные украшения и предметы декора в технике лэмпворк — авторские изделия из стекла, каждое из которых неповторимо.</p>
+                        <p data-i18n="aboutText3">Работы Ирины находятся в частных коллекциях в России, Европе и Азии. Каждая картина — это приглашение остановиться и почувствовать красоту мгновения.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label" data-i18n="statWorks">работ</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-i18n="statYears">лет опыта</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label" data-i18n="statCountries">континента</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACTS ==================== -->
+        <section class="page page-contacts" id="page-contacts">
+            <div class="contacts-layout">
+                <div class="contacts-info">
+                    <span class="section-label" data-i18n="contactsLabel">Связаться</span>
+                    <h1 class="contacts-title" data-i18n="contactsTitle">Контакты</h1>
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@krechetova-art.ru" class="contact-value contact-email">info@krechetova-art.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label" data-i18n="phone">Телефон</span>
+                            <a href="tel:+79001234567" class="contact-value contact-phone">+7 (900) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141a.506.506 0 0 1 .171.325c.016.093.036.306.02.472z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WeChat">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm3.214 4.457c-4.076 0-7.38 2.78-7.38 6.204 0 3.424 3.304 6.204 7.38 6.204.825 0 1.63-.12 2.397-.34a.72.72 0 0 1 .588.082l1.572.919a.27.27 0 0 0 .138.045c.132 0 .24-.108.24-.243 0-.06-.023-.118-.039-.176l-.326-1.218a.49.49 0 0 1 .176-.546C21.096 17.685 22.19 15.89 22.19 16.652c0-3.424-3.304-6.204-7.38-6.204zm-2.504 3.473c.535 0 .969.44.969.983a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.544.434-.983.97-.983zm5.009 0c.535 0 .969.44.969.983a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.544.434-.983.97-.983z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-form-wrap">
+                    <h3 class="form-title" data-i18n="writeUs">Напишите нам</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder=" " required>
+                            <label class="form-label" data-i18n="formName">Имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder=" " required>
+                            <label class="form-label">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input form-textarea" placeholder=" " rows="4" required></textarea>
+                            <label class="form-label" data-i18n="formMessage">Сообщение</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="formSend">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Delivery & Payment Info -->
+            <div class="delivery-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="deliveryTitle">Доставка и оплата</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="delivery-grid">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <h4 data-i18n="deliveryShipping">Доставка</h4>
+                        <p data-i18n="deliveryShippingText">Стоимость доставки рассчитывается индивидуально. Доставляем по России и всему миру.</p>
+                    </div>
+                    <div class="delivery-card">
+                        <div class="delivery-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        </div>
+                        <h4 data-i18n="deliveryPayment">Оплата</h4>
+                        <p data-i18n="deliveryPaymentText">Принимаем оплату банковскими картами Visa, Mastercard, UnionPay. Безопасные платежи.</p>
+                    </div>
+                    <div class="delivery-card">
+                        <div class="delivery-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4 data-i18n="deliveryGuarantee">Гарантия</h4>
+                        <p data-i18n="deliveryGuaranteeText">Каждая работа — оригинал с сертификатом подлинности. Бережная упаковка.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== CART SIDEBAR ==================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 data-i18n="cartTitle">Корзина</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" data-i18n="cartEmpty">Корзина пуста</div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span data-i18n="cartTotal">Итого:</span>
+                <span class="cart-total-price" id="cartTotalPrice">0 ₽</span>
+            </div>
+            <p class="cart-delivery-note" data-i18n="cartDeliveryNote">Стоимость доставки рассчитывается отдельно</p>
+            <button class="btn btn-primary cart-checkout-btn" id="checkoutBtn" data-i18n="cartCheckout">Оформить заказ</button>
+        </div>
+    </aside>
+
+    <!-- ==================== AUTH MODAL ==================== -->
+    <div class="modal-overlay" id="authOverlay">
+        <div class="modal auth-modal" id="authModal">
+            <button class="modal-close" id="authClose" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login" data-i18n="authLogin">Вход</button>
+                <button class="auth-tab" data-tab="register" data-i18n="authRegister">Регистрация</button>
+            </div>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder=" " required>
+                    <label class="form-label">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="authPassword">Пароль</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-i18n="authLoginBtn">Войти</button>
+            </form>
+            <form class="auth-form" id="registerForm" style="display:none">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="formName">Имя</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder=" " required>
+                    <label class="form-label">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="authPassword">Пароль</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-i18n="authRegisterBtn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== CHECKOUT MODAL ==================== -->
+    <div class="modal-overlay" id="checkoutOverlay">
+        <div class="modal checkout-modal" id="checkoutModal">
+            <button class="modal-close" id="checkoutClose" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <h2 data-i18n="checkoutTitle">Оформление заказа</h2>
+            <form class="checkout-form" id="checkoutForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-input" placeholder=" " required>
+                        <label class="form-label" data-i18n="formName">Имя</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastname" class="form-input" placeholder=" ">
+                        <label class="form-label" data-i18n="formLastName">Фамилия</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="contact" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="formContact">Email / Telegram / Телефон</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-input form-textarea" placeholder=" " rows="3"></textarea>
+                    <label class="form-label" data-i18n="formWishes">Пожелания</label>
+                </div>
+                <div class="checkout-summary" id="checkoutSummary"></div>
+                <button type="submit" class="btn btn-primary" data-i18n="checkoutSend">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== COPY REQUEST MODAL ==================== -->
+    <div class="modal-overlay" id="copyOverlay">
+        <div class="modal copy-modal" id="copyModal">
+            <button class="modal-close" id="copyClose" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <h2 data-i18n="copyTitle">Заказать копию</h2>
+            <p class="copy-desc" data-i18n="copyDesc">Оставьте заявку, и мы свяжемся с вами для обсуждения деталей и сроков изготовления.</p>
+            <p class="copy-painting-name" id="copyPaintingName"></p>
+            <form class="copy-form" id="copyForm">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="formName">Имя</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="contact" class="form-input" placeholder=" " required>
+                    <label class="form-label" data-i18n="formContact">Email / Telegram / Телефон</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-input form-textarea" placeholder=" " rows="3"></textarea>
+                    <label class="form-label" data-i18n="formWishes">Пожелания</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-i18n="copySend">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST ==================== -->
+    <div class="toast" id="toast">
+        <span class="toast-text" id="toastText"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">IK</span>
+                <p data-i18n="footerCopy">© 2025 Ирина Кречетова. Все права защищены.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" data-navigate="about" data-i18n="navAbout">О художнике</a>
+                <a href="#" data-navigate="contacts" data-i18n="navContacts">Контакты</a>
+                <a href="#" data-navigate="contacts" data-i18n="deliveryTitle">Доставка и оплата</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141a.506.506 0 0 1 .171.325c.016.093.036.306.02.472z"/></svg></a>
+                <a href="#" aria-label="WeChat"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

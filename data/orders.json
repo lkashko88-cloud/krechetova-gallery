@@ -1,0 +1,37 @@
+{
+  "orders": [
+    {
+      "id": "o1-mmz2lgfn",
+      "name": "Иван Петров",
+      "contact": "ivan@mail.ru",
+      "message": "Хочу с доставкой в Москву",
+      "items": [
+        {
+          "id": "p1",
+          "title": "Академ. Весна",
+          "size": "50×40",
+          "price": 35000
+        }
+      ],
+      "lang": "ru",
+      "status": "in-progress",
+      "notes": "Договорились на 30000, отправка СДЭК",
+      "createdAt": "2026-03-20T15:44:57.971Z"
+    }
+  ],
+  "copyRequests": [
+    {
+      "id": "cr1-mmz2lgg9",
+      "name": "John Smith",
+      "contact": "john@gmail.com",
+      "message": "I love this painting",
+      "paintingId": "p12",
+      "paintingTitle": "Любовный роман",
+      "paintingSize": "60×70",
+      "lang": "en",
+      "status": "new",
+      "notes": "",
+      "createdAt": "2026-03-20T15:44:57.993Z"
+    }
+  ]
+}

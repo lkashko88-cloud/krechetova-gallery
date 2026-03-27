@@ -1,0 +1,51 @@
+{
+  "password": "gallery2025",
+  "about": {
+    "photo": "",
+    "text1": {
+      "ru": "Художник-импрессионист, работающий в технике масляной живописи. Картины Ирины наполнены светом, воздухом и эмоциями — каждая работа передаёт настроение момента.",
+      "en": "An impressionist painter working with oil on canvas. Irina's paintings are filled with light, air, and emotion — each work captures the mood of a moment.",
+      "cn": "印象派画家，擅长油画创作。伊琳娜的画作充满光线、空气和情感——每幅作品都捕捉了瞬间的情绪。"
+    },
+    "text2": {
+      "ru": "Помимо живописи, Ирина создаёт уникальные украшения и предметы декора в технике лэмпворк — авторские изделия из стекла, каждое из которых неповторимо.",
+      "en": "In addition to painting, Irina creates unique jewelry and home decor using the lampwork technique — handmade glass pieces, each one-of-a-kind.",
+      "cn": "除了绘画，伊琳娜还使用玻璃灯工技术创作独特的珠宝和家居装饰品——每件手工玻璃作品都是独一无二的。"
+    },
+    "text3": {
+      "ru": "Работы Ирины находятся в частных коллекциях в России, Европе и Азии. Каждая картина — это приглашение остановиться и почувствовать красоту мгновения.",
+      "en": "Irina's works are in private collections across Russia, Europe, and Asia. Each painting is an invitation to pause and feel the beauty of an instant.",
+      "cn": "伊琳娜的作品被俄罗斯、欧洲和亚洲的私人收藏家收藏。每幅画都是一个邀请，让您停下来感受瞬间之美。"
+    },
+    "stats": {
+      "works": "150+",
+      "years": "10+",
+      "continents": "3"
+    }
+  },
+  "contacts": {
+    "email": "info@krechetova-art.ru",
+    "phone": "+7 (999) 123-45-67",
+    "instagram": "",
+    "telegram": "",
+    "vk": "",
+    "max": ""
+  },
+  "delivery": {
+    "shipping": {
+      "ru": "Стоимость доставки рассчитывается индивидуально. Доставляем по России и всему миру.",
+      "en": "Shipping costs are calculated individually. We deliver to Russia and worldwide.",
+      "cn": "运费根据情况单独计算。我们向俄罗斯及全球配送。"
+    },
+    "payment": {
+      "ru": "Принимаем оплату банковскими картами Visa, Mastercard, UnionPay. Безопасные платежи.",
+      "en": "We accept Visa, Mastercard, UnionPay. Secure payments.",
+      "cn": "接受Visa、万事达、银联支付。安全支付。"
+    },
+    "guarantee": {
+      "ru": "Каждая работа — оригинал с сертификатом подлинности. Бережная упаковка.",
+      "en": "Every work is an original with a certificate of authenticity. Careful packaging.",
+      "cn": "每件作品均为原创，附带真品证书。精心包装。"
+    }
+  }
+}

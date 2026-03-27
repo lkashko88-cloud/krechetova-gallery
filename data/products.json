@@ -1,0 +1,949 @@
+{
+  "paintings": [
+    {
+      "id": "p1",
+      "title": {
+        "ru": "Академ. Весна",
+        "en": "Academ. Spring",
+        "cn": "学院之春"
+      },
+      "size": "50×40",
+      "price": 35000,
+      "category": "landscapes",
+      "sold": false,
+      "image": "images/paintings/landscapes/academ-spring.jpg",
+      "gradient": "--g1:#6da87a;--g2:#c4d48c;--g3:#8bc4a4;--g4:#e8d5a0;--g5:#7ab888",
+      "year": 2021,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p2",
+      "title": {
+        "ru": "Берег реки. Гоа",
+        "en": "River Bank. Goa Palolim",
+        "cn": "河岸·果阿帕洛莱姆"
+      },
+      "size": "50×40",
+      "price": 32000,
+      "category": "landscapes",
+      "sold": false,
+      "image": "images/paintings/landscapes/river-bank-goa.jpg",
+      "gradient": "--g1:#d4a574;--g2:#7ec8c8;--g3:#e8c48c;--g4:#5ea8a8;--g5:#c4a060",
+      "year": 2018,
+      "technique": {
+        "ru": "холст на картоне, масло",
+        "en": "oil on cardboard",
+        "cn": "纸板油画"
+      }
+    },
+    {
+      "id": "p3",
+      "title": {
+        "ru": "Весна",
+        "en": "Spring",
+        "cn": "春天"
+      },
+      "size": "50×40",
+      "price": 38000,
+      "category": "landscapes",
+      "sold": false,
+      "image": "images/paintings/landscapes/spring.jpg",
+      "gradient": "--g1:#a8d8a8;--g2:#f0e0b0;--g3:#88c0a0;--g4:#d4c490;--g5:#b0dca0",
+      "year": 2021,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p4",
+      "title": {
+        "ru": "Ветер",
+        "en": "Wind",
+        "cn": "风"
+      },
+      "size": "59×40",
+      "price": 42000,
+      "category": "landscapes",
+      "sold": false,
+      "image": "images/paintings/landscapes/wind.jpg",
+      "gradient": "--g1:#8eb8d4;--g2:#c0d8e8;--g3:#a0c8b4;--g4:#d8d0b0;--g5:#90b8c8",
+      "year": 2020,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p5",
+      "title": {
+        "ru": "Доминикана",
+        "en": "Dominicana",
+        "cn": "多米尼加"
+      },
+      "size": "40×30",
+      "price": 25000,
+      "category": "landscapes",
+      "sold": false,
+      "image": "images/paintings/landscapes/dominicana.jpg",
+      "gradient": "--g1:#40b8c8;--g2:#e8d090;--g3:#60c0a0;--g4:#f0e8c0;--g5:#50b0b0",
+      "year": 2019,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p6",
+      "title": {
+        "ru": "Друзья",
+        "en": "Friends",
+        "cn": "朋友们"
+      },
+      "size": "50×40",
+      "price": 36000,
+      "category": "landscapes",
+      "sold": false,
+      "gradient": "--g1:#7ab070;--g2:#d0c888;--g3:#90c098;--g4:#e0d8a8;--g5:#68a870",
+      "year": 2025,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p7",
+      "title": {
+        "ru": "Лодки. Ковалам",
+        "en": "Boats. Kovalam",
+        "cn": "小船·科瓦拉姆"
+      },
+      "size": "50×40",
+      "price": 34000,
+      "category": "landscapes",
+      "sold": false,
+      "gradient": "--g1:#4898b0;--g2:#d8a868;--g3:#68b8c8;--g4:#c8a050;--g5:#58a8b8",
+      "year": 2018,
+      "technique": {
+        "ru": "холст на картоне, масло",
+        "en": "oil on cardboard",
+        "cn": "纸板油画"
+      }
+    },
+    {
+      "id": "p8",
+      "title": {
+        "ru": "Маяк. Крым. Тарханкут",
+        "en": "Lighthouse. Crimea",
+        "cn": "灯塔·克里米亚"
+      },
+      "size": "50×40",
+      "price": 40000,
+      "category": "landscapes",
+      "sold": false,
+      "gradient": "--g1:#e8d8a0;--g2:#88b0c8;--g3:#d0c090;--g4:#70a0b8;--g5:#c8b878",
+      "year": 2020,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p9",
+      "title": {
+        "ru": "Регата",
+        "en": "Regatta",
+        "cn": "帆船赛"
+      },
+      "size": "60×50",
+      "price": 55000,
+      "category": "landscapes",
+      "sold": false,
+      "gradient": "--g1:#3888b0;--g2:#e0e8f0;--g3:#5898c0;--g4:#d0d8e0;--g5:#4890b8",
+      "year": 2025,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p10",
+      "title": {
+        "ru": "Остров",
+        "en": "Island",
+        "cn": "岛屿"
+      },
+      "size": "50×40",
+      "price": 33000,
+      "category": "landscapes",
+      "sold": false,
+      "gradient": "--g1:#40b0a0;--g2:#e8e0b0;--g3:#60c0b0;--g4:#d0c890;--g5:#50b8a8",
+      "year": 2019,
+      "technique": {
+        "ru": "картон, масло",
+        "en": "oil on cardboard",
+        "cn": "纸板油画"
+      }
+    },
+    {
+      "id": "p11",
+      "title": {
+        "ru": "Натюрморт с тыквой",
+        "en": "Pumpkin Still Life",
+        "cn": "南瓜静物"
+      },
+      "size": "50×60",
+      "price": 38000,
+      "category": "still-life",
+      "sold": false,
+      "image": "images/paintings/still-life/pumpkin.jpg",
+      "gradient": "--g1:#d89030;--g2:#886838;--g3:#c88828;--g4:#a87840;--g5:#e8a040",
+      "year": 2020,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p12",
+      "title": {
+        "ru": "Любовный роман",
+        "en": "Love Romance",
+        "cn": "爱情小说"
+      },
+      "size": "60×70",
+      "price": 48000,
+      "category": "still-life",
+      "sold": true,
+      "image": "images/paintings/still-life/love-romance.jpg",
+      "gradient": "--g1:#c86868;--g2:#d8a870;--g3:#b85858;--g4:#e0c090;--g5:#d07878",
+      "year": 2019,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p13",
+      "title": {
+        "ru": "Ранетки",
+        "en": "Crab Apples",
+        "cn": "海棠果"
+      },
+      "size": "50×70",
+      "price": 45000,
+      "category": "still-life",
+      "sold": false,
+      "image": "images/paintings/still-life/crab-apples.jpg",
+      "gradient": "--g1:#c84040;--g2:#78a850;--g3:#d86050;--g4:#90b860;--g5:#a83030",
+      "year": 2021,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p14",
+      "title": {
+        "ru": "Сочный",
+        "en": "Juicy",
+        "cn": "多汁"
+      },
+      "size": "70×50",
+      "price": 46000,
+      "category": "still-life",
+      "sold": false,
+      "image": "images/paintings/still-life/juicy.jpg",
+      "gradient": "--g1:#d8a030;--g2:#a08028;--g3:#e8b840;--g4:#c09830;--g5:#f0c848",
+      "year": 2021,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p15",
+      "title": {
+        "ru": "Тунисский орнамент",
+        "en": "Tunisian Ornament",
+        "cn": "突尼斯装饰"
+      },
+      "size": "50×60",
+      "price": 42000,
+      "category": "still-life",
+      "sold": false,
+      "image": "images/paintings/still-life/tunisian-ornament.jpg",
+      "gradient": "--g1:#c8c8c8;--g2:#d8d8d8;--g3:#b8b8b8;--g4:#e0e0e0;--g5:#c0c0c0",
+      "year": 2018,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "",
+        "cn": ""
+      }
+    },
+    {
+      "id": "p16",
+      "title": {
+        "ru": "Стрелиция",
+        "en": "Strelitzia",
+        "cn": "鹤望兰"
+      },
+      "size": "40×30",
+      "price": 22000,
+      "category": "flowers",
+      "sold": false,
+      "image": "images/paintings/flowers/strelitzia.jpg",
+      "gradient": "--g1:#e87820;--g2:#48a038;--g3:#f09030;--g4:#68b850;--g5:#d06818",
+      "year": 2019,
+      "technique": {
+        "ru": "холст на картоне, масло",
+        "en": "oil on cardboard",
+        "cn": "纸板油画"
+      }
+    },
+    {
+      "id": "p17",
+      "title": {
+        "ru": "Снегурочка. Автопортрет",
+        "en": "Snow Maiden. Self-portrait",
+        "cn": "雪姑娘·自画像"
+      },
+      "size": "100×100",
+      "price": 120000,
+      "category": "portraits",
+      "sold": false,
+      "image": "images/paintings/portraits/snow-maiden.jpg",
+      "gradient": "--g1:#88b8d8;--g2:#e0e8f0;--g3:#a0c8e0;--g4:#d0d8e8;--g5:#78a8c8",
+      "year": 2022,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p22",
+      "title": {
+        "ru": "Васильки",
+        "en": "Cornflowers",
+        "cn": "矢车菊"
+      },
+      "size": "40×40",
+      "price": 28000,
+      "category": "flowers",
+      "sold": false,
+      "image": "images/paintings/flowers/cornflowers.jpg",
+      "gradient": "--g1:#4060c0;--g2:#80a848;--g3:#5070d0;--g4:#90b858;--g5:#3858b0",
+      "year": 2024,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p23",
+      "title": {
+        "ru": "Лотосы",
+        "en": "Lotuses",
+        "cn": "莲花"
+      },
+      "size": "40×30",
+      "price": 22000,
+      "category": "flowers",
+      "sold": false,
+      "image": "images/paintings/flowers/lotuses.jpg",
+      "gradient": "--g1:#e0a0b0;--g2:#48a860;--g3:#d890a0;--g4:#58b870;--g5:#c88090",
+      "year": 2018,
+      "technique": {
+        "ru": "картон, масло",
+        "en": "oil on cardboard",
+        "cn": "纸板油画"
+      }
+    },
+    {
+      "id": "p24",
+      "title": {
+        "ru": "Мальвы",
+        "en": "Mallows",
+        "cn": "锦葵"
+      },
+      "size": "60×80",
+      "price": 52000,
+      "category": "flowers",
+      "sold": false,
+      "image": "images/paintings/flowers/mallows.jpg",
+      "gradient": "--g1:#d86088;--g2:#68a848;--g3:#e07098;--g4:#78b858;--g5:#c85078",
+      "year": 2024,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p25",
+      "title": {
+        "ru": "Ландыши. День",
+        "en": "Lilies of the Valley. Day",
+        "cn": "铃兰·白天"
+      },
+      "size": "20×40",
+      "price": 18000,
+      "category": "flowers",
+      "sold": false,
+      "image": "images/paintings/flowers/lilies-day.jpg",
+      "gradient": "--g1:#e8e8e0;--g2:#68a848;--g3:#f0f0e8;--g4:#78b858;--g5:#d8d8d0",
+      "year": 2025,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p26",
+      "title": {
+        "ru": "Девушка на Гоа",
+        "en": "Girl in Goa",
+        "cn": "果阿的女孩"
+      },
+      "size": "40×50",
+      "price": 45000,
+      "category": "portraits",
+      "sold": false,
+      "image": "images/paintings/portraits/girl-goa.jpg",
+      "gradient": "--g1:#d4a574;--g2:#e8c4a0;--g3:#c89468;--g4:#d8b490;--g5:#b88458",
+      "year": 2018,
+      "technique": {
+        "ru": "оргалит, масло",
+        "en": "oil on fiberboard",
+        "cn": "纤维板油画"
+      }
+    },
+    {
+      "id": "p27",
+      "title": {
+        "ru": "Натурщица",
+        "en": "Model",
+        "cn": "模特"
+      },
+      "size": "60×80",
+      "price": 65000,
+      "category": "portraits",
+      "sold": false,
+      "image": "images/paintings/portraits/model.jpg",
+      "gradient": "--g1:#e8c8a0;--g2:#c8a078;--g3:#d8b890;--g4:#b89068;--g5:#f0d0a8",
+      "year": 2020,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p28",
+      "title": {
+        "ru": "Портрет",
+        "en": "Portrait",
+        "cn": "肖像"
+      },
+      "size": "50×70",
+      "price": 55000,
+      "category": "portraits",
+      "sold": false,
+      "image": "images/paintings/portraits/portrait-3.jpg",
+      "gradient": "--g1:#c8a878;--g2:#e8d8b8;--g3:#b89868;--g4:#d8c8a8;--g5:#a88858",
+      "year": 2024,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p29",
+      "title": {
+        "ru": "Портрет в интерьере",
+        "en": "Portrait in Interior",
+        "cn": "室内肖像"
+      },
+      "size": "50×70",
+      "price": 58000,
+      "category": "portraits",
+      "sold": false,
+      "image": "images/paintings/portraits/portrait-4.jpg",
+      "gradient": "--g1:#d0b090;--g2:#a08868;--g3:#c0a080;--g4:#907858;--g5:#e0c0a0",
+      "year": 2025,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p18",
+      "title": {
+        "ru": "Морской проспект",
+        "en": "Sea Avenue",
+        "cn": "海滨大道"
+      },
+      "size": "100×100",
+      "price": 95000,
+      "category": "large-format",
+      "sold": true,
+      "gradient": "--g1:#3080a8;--g2:#d0c880;--g3:#4898b8;--g4:#b8b070;--g5:#5898b0",
+      "year": 2023,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p19",
+      "title": {
+        "ru": "Парад военных кораблей",
+        "en": "Naval Parade",
+        "cn": "军舰阅兵"
+      },
+      "size": "100×60",
+      "price": 85000,
+      "category": "large-format",
+      "sold": false,
+      "image": "images/paintings/large-format/naval-parade.jpg",
+      "gradient": "--g1:#405878;--g2:#8898a8;--g3:#506888;--g4:#98a8b8;--g5:#607898",
+      "year": 2025,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p20",
+      "title": {
+        "ru": "Шри-Ланка",
+        "en": "Sri Lanka",
+        "cn": "斯里兰卡"
+      },
+      "size": "194×94",
+      "price": 180000,
+      "category": "large-format",
+      "sold": false,
+      "gradient": "--g1:#30a890;--g2:#e8d880;--g3:#48b8a0;--g4:#d0c070;--g5:#58c0a8",
+      "year": 2020,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p30",
+      "title": {
+        "ru": "Доброфлот",
+        "en": "Dobroflot",
+        "cn": "多布罗弗洛特"
+      },
+      "size": "154×94",
+      "price": 160000,
+      "category": "large-format",
+      "sold": false,
+      "image": "images/paintings/large-format/dobroflot.jpg",
+      "gradient": "--g1:#3878a8;--g2:#c8b878;--g3:#4888b8;--g4:#b8a868;--g5:#5898c0",
+      "year": 2024,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p31",
+      "title": {
+        "ru": "Оттепель",
+        "en": "Thaw",
+        "cn": "解冻"
+      },
+      "size": "100×80",
+      "price": 90000,
+      "category": "large-format",
+      "sold": false,
+      "image": "images/paintings/large-format/thaw.jpg",
+      "gradient": "--g1:#a8c8d8;--g2:#d8d0c0;--g3:#98b8c8;--g4:#c8c0b0;--g5:#b8d0e0",
+      "year": 2023,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p32",
+      "title": {
+        "ru": "Подружки",
+        "en": "Girlfriends",
+        "cn": "女友们"
+      },
+      "size": "120×100",
+      "price": 120000,
+      "category": "large-format",
+      "sold": false,
+      "image": "images/paintings/large-format/girlfriends.jpg",
+      "gradient": "--g1:#d8a880;--g2:#88b8a0;--g3:#c89870;--g4:#78a890;--g5:#e8b890",
+      "year": 2022,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p33",
+      "title": {
+        "ru": "Рыбаки на шестах",
+        "en": "Stilt Fishermen",
+        "cn": "高跷渔夫"
+      },
+      "size": "120×100",
+      "price": 125000,
+      "category": "large-format",
+      "sold": false,
+      "image": "images/paintings/large-format/fishermen.jpg",
+      "gradient": "--g1:#e8c090;--g2:#60a8c0;--g3:#d8b080;--g4:#509890;--g5:#f0c8a0",
+      "year": 2019,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "id": "p21",
+      "title": {
+        "ru": "Миниатюра. Животное",
+        "en": "Miniature. Animal",
+        "cn": "微型画·动物"
+      },
+      "size": "15×15",
+      "price": 5000,
+      "category": "animals",
+      "sold": false,
+      "image": "images/paintings/animals/animal-painting.jpg",
+      "gradient": "--g1:#c8a878;--g2:#e8d8b8;--g3:#b89868;--g4:#d8c8a8;--g5:#a88858",
+      "year": 2023,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "oil on canvas",
+        "cn": "布面油画"
+      }
+    },
+    {
+      "title": {
+        "ru": "Багульник",
+        "en": "Ledum",
+        "cn": "杜香"
+      },
+      "size": "70х50",
+      "price": 50000,
+      "category": "still-life",
+      "sold": false,
+      "image": "images/uploads/e9779d7066a33d61.jpg",
+      "year": 2022,
+      "technique": {
+        "ru": "холст, масло",
+        "en": "",
+        "cn": ""
+      },
+      "gradient": "--g1:#c8c8c8;--g2:#d8d8d8;--g3:#b8b8b8;--g4:#e0e0e0;--g5:#c0c0c0",
+      "id": "p34"
+    }
+  ],
+  "lampwork": [
+    {
+      "id": "l1",
+      "title": {
+        "ru": "Браслет «Цветной лёд»",
+        "en": "Bracelet \"Colorful Ice\"",
+        "cn": "手链《彩色冰》"
+      },
+      "size": "18 см",
+      "price": 4500,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/colorful-ice-1.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l2",
+      "title": {
+        "ru": "Браслет «Цветной лёд» — вид 2",
+        "en": "Bracelet \"Colorful Ice\" — view 2",
+        "cn": "手链《彩色冰》— 视图2"
+      },
+      "size": "18 см",
+      "price": 4500,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/colorful-ice-2.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l3",
+      "title": {
+        "ru": "Браслет «Цветной лёд» — вид 3",
+        "en": "Bracelet \"Colorful Ice\" — view 3",
+        "cn": "手链《彩色冰》— 视图3"
+      },
+      "size": "18 см",
+      "price": 4800,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/colorful-ice-3.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l4",
+      "title": {
+        "ru": "Мужской браслет «Глаз дракона»",
+        "en": "Men's Bracelet \"Dragon Eye\"",
+        "cn": "男士手链《龙眼》"
+      },
+      "size": "20 см",
+      "price": 2700,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/dragon-eye-1.jpg",
+      "material": {
+        "ru": "стекло, кожа",
+        "en": "glass, leather",
+        "cn": "玻璃, 皮革"
+      }
+    },
+    {
+      "id": "l5",
+      "title": {
+        "ru": "Браслет «Глаз дракона» — вид 2",
+        "en": "Bracelet \"Dragon Eye\" — view 2",
+        "cn": "手链《龙眼》— 视图2"
+      },
+      "size": "20 см",
+      "price": 2700,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/dragon-eye-2.jpg",
+      "material": {
+        "ru": "стекло, кожа",
+        "en": "glass, leather",
+        "cn": "玻璃, 皮革"
+      }
+    },
+    {
+      "id": "l6",
+      "title": {
+        "ru": "Браслет «Морская царевна»",
+        "en": "Bracelet \"Sea Princess\"",
+        "cn": "手链《海洋公主》"
+      },
+      "size": "18 см",
+      "price": 5200,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/sea-princess-1.jpg",
+      "material": {
+        "ru": "стекло, родированная фурнитура",
+        "en": "glass, rhodium-plated hardware",
+        "cn": "玻璃, 镀铑配件"
+      }
+    },
+    {
+      "id": "l7",
+      "title": {
+        "ru": "Браслет авторский",
+        "en": "Designer Bracelet",
+        "cn": "设计师手链"
+      },
+      "size": "18 см",
+      "price": 3800,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/bracelet-7.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l8",
+      "title": {
+        "ru": "Браслет с бусинами лэмпворк",
+        "en": "Lampwork Bead Bracelet",
+        "cn": "灯工珠手链"
+      },
+      "size": "18 см",
+      "price": 3500,
+      "category": "bracelets",
+      "sold": false,
+      "image": "images/lampwork/bracelets/bracelet-8.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l9",
+      "title": {
+        "ru": "Аромакулон",
+        "en": "Aroma Pendant",
+        "cn": "芳香吊坠"
+      },
+      "size": "3×3 см",
+      "price": 2200,
+      "category": "pendants",
+      "sold": false,
+      "image": "images/lampwork/pendants/aroma-pendant-1.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l10",
+      "title": {
+        "ru": "Аромакулон — набор",
+        "en": "Aroma Pendant — Set",
+        "cn": "芳香吊坠套装"
+      },
+      "size": "3×3 см",
+      "price": 2500,
+      "category": "pendants",
+      "sold": false,
+      "image": "images/lampwork/pendants/aroma-pendant-2.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l11",
+      "title": {
+        "ru": "Брошь «Сосульки»",
+        "en": "Brooch \"Icicles\"",
+        "cn": "胸针《冰柱》"
+      },
+      "size": "5×4 см",
+      "price": 3200,
+      "category": "brooches",
+      "sold": false,
+      "image": "images/lampwork/brooches/icicles.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l12",
+      "title": {
+        "ru": "Брошь авторская",
+        "en": "Designer Brooch",
+        "cn": "设计师胸针"
+      },
+      "size": "4×4 см",
+      "price": 2800,
+      "category": "brooches",
+      "sold": false,
+      "image": "images/lampwork/brooches/brooch-2.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l13",
+      "title": {
+        "ru": "Брошь с цветком",
+        "en": "Flower Brooch",
+        "cn": "花朵胸针"
+      },
+      "size": "5×5 см",
+      "price": 3000,
+      "category": "brooches",
+      "sold": false,
+      "image": "images/lampwork/brooches/brooch-3.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    },
+    {
+      "id": "l14",
+      "title": {
+        "ru": "Брошь «Жук»",
+        "en": "Brooch \"Beetle\"",
+        "cn": "胸针《甲虫》"
+      },
+      "size": "4×3 см",
+      "price": 3500,
+      "category": "brooches",
+      "sold": false,
+      "image": "images/lampwork/brooches/beetle-1.jpg",
+      "material": {
+        "ru": "стекло, медь",
+        "en": "glass, copper",
+        "cn": "玻璃, 铜"
+      }
+    },
+    {
+      "id": "l15",
+      "title": {
+        "ru": "Колье авторское",
+        "en": "Designer Necklace",
+        "cn": "设计师项链"
+      },
+      "size": "45 см",
+      "price": 6800,
+      "category": "necklaces",
+      "sold": false,
+      "image": "images/lampwork/necklaces/necklace-1.jpg",
+      "material": {
+        "ru": "стекло",
+        "en": "glass",
+        "cn": "玻璃"
+      }
+    }
+  ]
+}

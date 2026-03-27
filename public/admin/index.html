@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель управления — Ирина Кречетова</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">IK</div>
+      <h1 class="login-title">Панель управления</h1>
+      <p class="login-subtitle">Галерея Ирины Кречетовой</p>
+      <form id="loginForm" class="login-form">
+        <div class="input-group">
+          <input type="password" id="loginPassword" placeholder="Введите пароль" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Войти</button>
+        <p class="login-error" id="loginError"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== ADMIN PANEL ===== -->
+  <div class="admin-panel" id="adminPanel" style="display:none">
+
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="admin-header-left">
+        <div class="admin-logo">IK</div>
+        <h1 class="admin-title">Панель управления</h1>
+      </div>
+      <div class="admin-header-right">
+        <a href="/" class="btn btn-outline btn-sm" target="_blank">Открыть сайт</a>
+        <button class="btn btn-ghost btn-sm" id="logoutBtn">Выйти</button>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-number" id="statPaintings">0</div>
+        <div class="stat-label">Картин</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statLampwork">0</div>
+        <div class="stat-label">Украшений</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statSold">0</div>
+        <div class="stat-label">Продано</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statOrders">0</div>
+        <div class="stat-label">Новых заказов</div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions-bar">
+      <button class="btn btn-primary btn-lg" id="addPaintingBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Добавить картину
+      </button>
+      <button class="btn btn-primary btn-lg" id="addLampworkBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Добавить украшение
+      </button>
+    </div>
+
+    <!-- Paintings Section -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4-4 4 4 4-6 6 8"/></svg>
+        Картины
+      </h2>
+      <div class="products-grid" id="paintingsGrid"></div>
+    </section>
+
+    <!-- Lampwork Section -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20"/><path d="M2 12h4M18 12h4"/></svg>
+        Украшения (лэмпворк)
+      </h2>
+      <div class="products-grid" id="lampworkGrid"></div>
+    </section>
+
+    <!-- ===== ORDERS ===== -->
+    <hr class="section-divider">
+
+    <section class="section">
+      <h2 class="section-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Заказы
+        <span class="badge" id="ordersNewBadge" style="display:none">0</span>
+      </h2>
+      <div id="ordersList" class="orders-list"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l4-4 4 4 4-6 6 8"/></svg>
+        Заявки на копию
+        <span class="badge" id="copyNewBadge" style="display:none">0</span>
+      </h2>
+      <div id="copyRequestsList" class="orders-list"></div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="section-divider">
+
+    <!-- ===== SITE SETTINGS ===== -->
+    <section class="section">
+      <h2 class="section-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        Настройки сайта
+      </h2>
+
+      <!-- About section -->
+      <div class="settings-card">
+        <h3 class="settings-card-title">О художнике</h3>
+
+        <div class="form-group">
+          <label class="form-label">Фото</label>
+          <div class="upload-area upload-area-sm" id="aboutPhotoArea">
+            <div class="upload-placeholder" id="aboutPhotoPlaceholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/></svg>
+              <p>Загрузить фото</p>
+            </div>
+            <img class="upload-preview" id="aboutPhotoPreview" style="display:none">
+            <input type="file" id="aboutPhotoInput" accept="image/jpeg,image/png,image/webp" hidden>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Текст — абзац 1</label>
+          <textarea id="aboutText1" class="form-input form-textarea" rows="3" placeholder="О художнике..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Текст — абзац 2</label>
+          <textarea id="aboutText2" class="form-input form-textarea" rows="3" placeholder="О лэмпворке..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Текст — абзац 3</label>
+          <textarea id="aboutText3" class="form-input form-textarea" rows="3" placeholder="О коллекциях..."></textarea>
+        </div>
+
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label class="form-label">Работ</label>
+            <input type="text" id="aboutStatWorks" class="form-input" placeholder="150+">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Лет опыта</label>
+            <input type="text" id="aboutStatYears" class="form-input" placeholder="10+">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Континентов</label>
+            <input type="text" id="aboutStatContinents" class="form-input" placeholder="3">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="saveAboutBtn">Сохранить</button>
+      </div>
+
+      <!-- Contacts section -->
+      <div class="settings-card">
+        <h3 class="settings-card-title">Контакты</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="info@krechetova-art.ru">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон</label>
+            <input type="text" id="contactPhone" class="form-input" placeholder="+7 (999) 123-45-67">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Instagram</label>
+            <input type="text" id="contactInstagram" class="form-input" placeholder="@username">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telegram</label>
+            <input type="text" id="contactTelegram" class="form-input" placeholder="@username">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">ВКонтакте</label>
+            <input type="text" id="contactVk" class="form-input" placeholder="https://vk.com/username">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Max (ok.ru)</label>
+            <input type="text" id="contactMax" class="form-input" placeholder="https://ok.ru/username">
+          </div>
+        </div>
+        <button class="btn btn-primary" id="saveContactsBtn">Сохранить</button>
+      </div>
+
+      <!-- Delivery section -->
+      <div class="settings-card">
+        <h3 class="settings-card-title">Доставка и оплата</h3>
+        <div class="form-group">
+          <label class="form-label">Доставка</label>
+          <textarea id="deliveryShipping" class="form-input form-textarea" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Оплата</label>
+          <textarea id="deliveryPayment" class="form-input form-textarea" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Гарантия</label>
+          <textarea id="deliveryGuarantee" class="form-input form-textarea" rows="2"></textarea>
+        </div>
+        <button class="btn btn-primary" id="saveDeliveryBtn">Сохранить</button>
+      </div>
+
+      <!-- Password section -->
+      <div class="settings-card">
+        <h3 class="settings-card-title">Сменить пароль</h3>
+        <div class="form-group">
+          <label class="form-label">Текущий пароль</label>
+          <input type="password" id="currentPassword" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Новый пароль</label>
+          <input type="password" id="newPassword" class="form-input">
+        </div>
+        <button class="btn btn-primary" id="savePasswordBtn">Сменить пароль</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Добавить картину</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <form id="productForm" class="modal-body">
+
+        <!-- Image Upload -->
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-placeholder" id="uploadPlaceholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <p>Перетащите фото сюда</p>
+            <p class="upload-hint">или нажмите, чтобы выбрать</p>
+          </div>
+          <img class="upload-preview" id="uploadPreview" style="display:none">
+          <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp" hidden>
+        </div>
+
+        <!-- Title RU -->
+        <div class="form-group">
+          <label class="form-label">Название</label>
+          <input type="text" id="fieldTitleRu" class="form-input" placeholder="Например: Весна в саду" required>
+        </div>
+
+        <!-- Title EN -->
+        <div class="form-group">
+          <label class="form-label">Название (English)</label>
+          <input type="text" id="fieldTitleEn" class="form-input" placeholder="Spring in the Garden">
+        </div>
+
+        <!-- Title CN -->
+        <div class="form-group">
+          <label class="form-label">Название (中文)</label>
+          <input type="text" id="fieldTitleCn" class="form-input" placeholder="花园里的春天">
+        </div>
+
+        <!-- Size + Price row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Размер (см)</label>
+            <input type="text" id="fieldSize" class="form-input" placeholder="50×40" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Цена (₽)</label>
+            <input type="number" id="fieldPrice" class="form-input" placeholder="35000" required>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+          <label class="form-label">Категория</label>
+          <select id="fieldCategory" class="form-input" required>
+            <!-- Filled by JS depending on type -->
+          </select>
+        </div>
+        <div class="form-group" id="customCategoryGroup" style="display:none">
+          <label class="form-label">Название новой категории</label>
+          <input type="text" id="fieldCustomCategory" class="form-input" placeholder="Например: Морские пейзажи">
+        </div>
+
+        <!-- Year + Technique (paintings) -->
+        <div class="form-row" id="paintingFields">
+          <div class="form-group">
+            <label class="form-label">Год</label>
+            <input type="number" id="fieldYear" class="form-input" placeholder="2025">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Техника</label>
+            <input type="text" id="fieldTechnique" class="form-input" placeholder="холст, масло">
+          </div>
+        </div>
+
+        <!-- Material (lampwork) -->
+        <div class="form-group" id="lampworkFields" style="display:none">
+          <label class="form-label">Материал</label>
+          <input type="text" id="fieldMaterial" class="form-input" placeholder="стекло">
+        </div>
+
+        <!-- Sold toggle -->
+        <div class="form-group">
+          <label class="toggle-label">
+            <input type="checkbox" id="fieldSold" class="toggle-input">
+            <span class="toggle-switch"></span>
+            <span>Продано</span>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="modalCancel">Отмена</button>
+          <button type="submit" class="btn btn-primary" id="modalSave">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== DELETE CONFIRM ===== -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal modal-sm">
+      <div class="modal-header">
+        <h2 class="modal-title">Удалить?</h2>
+        <button class="modal-close" id="deleteModalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="delete-text">Вы уверены, что хотите удалить «<span id="deleteName"></span>»?</p>
+        <p class="delete-hint">Это действие нельзя отменить.</p>
+        <div class="form-actions">
+          <button class="btn btn-outline" id="deleteCancelBtn">Отмена</button>
+          <button class="btn btn-danger" id="deleteConfirmBtn">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ORDER DETAIL MODAL ===== -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="orderModalTitle">Заказ</h2>
+        <button class="modal-close" id="orderModalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="order-detail" id="orderDetail"></div>
+        <div class="form-group" style="margin-top:16px">
+          <label class="form-label">Статус</label>
+          <select id="orderStatus" class="form-input">
+            <option value="new">Новый</option>
+            <option value="in-progress">В работе</option>
+            <option value="paid">Оплачен</option>
+            <option value="shipped">Отправлен</option>
+            <option value="done">Завершён</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Заметки (для себя)</label>
+          <textarea id="orderNotes" class="form-input form-textarea" rows="3" placeholder="Договорились на 30000, отправка СДЭК..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-outline" id="orderModalCancel">Закрыть</button>
+          <button class="btn btn-primary" id="orderModalSave">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast">
+    <span id="toastText"></span>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
