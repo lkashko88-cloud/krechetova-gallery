@@ -433,9 +433,14 @@ app.get('/admin', (req, res) => {
 });
 
 // --- Start ---
-app.listen(PORT, () => {
-  console.log(`\n  🎨 Галерея Ирины Кречетовой`);
-  console.log(`  Сайт:    http://localhost:${PORT}`);
-  console.log(`  Админка: http://localhost:${PORT}/admin`);
-  console.log(`  Пароль:  ${getPassword()}\n`);
-});
+// On Vercel, export the app; locally, listen on PORT
+if (process.env.VERCEL) {
+  module.exports = app;
+} else {
+  app.listen(PORT, () => {
+    console.log(`\n  🎨 Галерея Ирины Кречетовой`);
+    console.log(`  Сайт:    http://localhost:${PORT}`);
+    console.log(`  Админка: http://localhost:${PORT}/admin`);
+    console.log(`  Пароль:  ${getPassword()}\n`);
+  });
+}
