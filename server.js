@@ -4,15 +4,18 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
-const sharp = require('sharp');
+let sharp;
+try { sharp = require('sharp'); } catch (e) { sharp = null; }
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const IS_VERCEL = !!process.env.VERCEL;
 
 // --- Config ---
 // On Amvera, /data is persistent storage that survives redeploys.
+// On Vercel, filesystem is read-only — use bundled data dir.
 // Locally, fall back to project directory.
-const IS_PRODUCTION = process.env.NODE_ENV === 'production' || fs.existsSync('/data');
+const IS_PRODUCTION = !IS_VERCEL && (process.env.NODE_ENV === 'production' || fs.existsSync('/data'));
 const PERSIST_DIR = IS_PRODUCTION ? '/data' : path.join(__dirname, 'data');
 const UPLOAD_DIR = IS_PRODUCTION
   ? '/data/uploads'
@@ -22,10 +25,12 @@ const DATA_FILE = path.join(PERSIST_DIR, 'products.json');
 const SETTINGS_FILE = path.join(PERSIST_DIR, 'settings.json');
 const ORDERS_FILE = path.join(PERSIST_DIR, 'orders.json');
 
-// Ensure directories exist
-[PERSIST_DIR, UPLOAD_DIR].forEach(dir => {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-});
+// Ensure directories exist (skip on Vercel — read-only filesystem)
+if (!IS_VERCEL) {
+  [PERSIST_DIR, UPLOAD_DIR].forEach(dir => {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  });
+}
 
 // On first production deploy, seed persistent storage with bundled data
 if (IS_PRODUCTION) {
@@ -191,6 +196,7 @@ app.post('/api/admin/upload', authMiddleware, upload.single('image'), async (req
     const optimizedName = baseName + '.jpg';
     const optimizedPath = path.join(UPLOAD_DIR, optimizedName);
 
+    if (!sharp) throw new Error('sharp not available');
     await sharp(originalPath)
       .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
       .jpeg({ quality: 85 })
